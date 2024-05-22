@@ -5,6 +5,7 @@ import {join, dirname} from 'path'
 import {fileURLToPath} from 'url'
 import {engine} from 'express-handlebars';
 import morgan from 'morgan';
+import personasRoutes from './routes/personas.routes.js'
 
 /* ------------------------------- initialization ------------------------------ */
 const app = express();
@@ -31,6 +32,8 @@ app.use(express.json())
 app.get('/', (req, res)=> {
     res.render('index')
 });
+
+app.use(personasRoutes);
 
 /* ------------------------------ Public files ------------------------------ */
 app.use(express.static(join(__dirname, 'public')))
