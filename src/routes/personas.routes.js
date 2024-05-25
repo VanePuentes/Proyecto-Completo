@@ -70,8 +70,10 @@ router.get('/edit/:id', async (req, res) => {
     }
 });
 
-router.post('/edit/:id', async (req, res) => {
+router.post('/edit/:id', upload.single('file'), async (req, res) => {
     try {
+        const { id } = req.params
+        const { name, lastname, age, observacion } = req.body
         let editPersona = {}
         if(req.file){
             const file = req.file
@@ -81,7 +83,7 @@ router.post('/edit/:id', async (req, res) => {
         }else{
             editPersona = {name, lastname, age, observacion}
         }
-
+        
         await pool.query('UPDATE personas SET ? WHERE id = ?', [editPersona, id]);
         res.redirect('/list');
     } catch (error) {
