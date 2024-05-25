@@ -3,36 +3,36 @@
         <div class="col-md-4 mx-auto">
             <div class="card text-center">
                 <div class="card-header">
-                <h3 class="text-uppercase"> editar una persona </h3>
+                    <h3 class="text-uppercase"> Editar una Persona </h3>
                 </div>
                 <div class="card-body">
-                     <form action="/edit/{{persona.id}}" method="post">
+                    <form action="/edit/{{persona.id}}" method="post">
 
-                     <div class="input-group mt-2">
-                     <label for="name" class="input-group-text"> * Nombre Persona </label>
-                     <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Dayana Patricia" value="{{persona.name}}" required>
-                     </div>
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text"> Nombre Persona </label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Dayana Vanessa" value="{{persona.name}}" autofocus required >
+                        </div>
 
-                     <div class="input-group mt-2">
-                     <label for="lastname" class="input-group-text"> * Apellido Persona  </label>
-                     <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Puentes Varela" value="{{persona.lastmane}}" required>
-                     </div>
+                        <div class="input-group mt-2">
+                            <label for="lastname" class="input-group-text"> Apellido Persona </label>
+                            <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Puentes Varela" value="{{persona.lastname}}" required >
+                        </div>
 
-                     <div class="input-group mt-2">
-                     <label for="age" class="input-group-text"> * Edad </label>
-                     <input class="form-control" type="number" name="age" id="age" placeholder="0"  value="{{persona.age}}" required>
-                     </div>
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text"> Edad </label>
+                            <input class="form-control" type="number" name="age" id="age" placeholder="0" value="{{persona.age}}" required >
+                        </div>
 
-                     <div class="input-group mt-2">
-                     <label for="Observaciones" class="input-group-text"> * Observaciones  </label>
-                     <input class="form-control" type="text" name="Observaciones" id="Observaciones" placeholder="Ejemplo: Observaciones" value="{{persona.Observaciones}}" required>
-                     </div>
+                        <div class="input-group mt-2">
+                            <label for="observacion" class="input-group-text"> Observacion </label>
+                            <input class="form-control" type="text" name="observacion" id="observacion" value="{{persona.observacion}}" placeholder="Escriba una observacion" required >
+                        </div>
 
-
-                           <div class="form-group mt-4 d-grid gap-2">
+                        <div class="form-group mt-4 d-grid gap-2">
                             <button class="btn btn-success"> Actualizar </button>
                         </div>
-                     </form>
+
+                    </form>
                 </div>
             </div>
         </div>
